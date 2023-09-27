@@ -63,7 +63,7 @@ namespace EmployeeManagement.Controllers
                     _employee.Entry(existingEmployee).State = EntityState.Modified;
                     _employee.SaveChanges();
 
-                    TempData["Success"] = "Customer deleted successfully!";
+                    TempData["Success"] = "Employee deleted successfully!";
                 }
             }
             return RedirectToAction("Index", "Employee");
@@ -78,7 +78,7 @@ namespace EmployeeManagement.Controllers
                 _employee.Entry(existingEmployee).State = EntityState.Modified;
             }
             _employee.SaveChanges();
-            return Json("All the customers deleted successfully!");
+            return Json("All the Employee deleted successfully!");
         }
     }
 
